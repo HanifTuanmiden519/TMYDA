@@ -29,7 +29,7 @@ export const scheduleData = [
     subtitle2: "2 สัปดาห์/ครั้ง",
     logo: "อัล มะ ดา รัจ",
     logoImage: "/public/image/4.png", // เพิ่มรูปโลโก้ที่นี่
-    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
+    youtubeUrl: "https://youtu.be/KpVRWgdNUBc?si=dusHmyA0nih_mVPu", // ลิงค์ยูทูป
     channels: ["TMYDA", "TMYDA"]
   },
   {
