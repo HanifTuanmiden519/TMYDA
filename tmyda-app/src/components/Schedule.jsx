@@ -18,6 +18,12 @@ const SocialIcon = ({ platform }) => {
 };
 
 const ScheduleCard = ({ item }) => {
+  const handleLogoClick = () => {
+    if (item.youtubeUrl) {
+      window.open(item.youtubeUrl, '_blank');
+    }
+  };
+
   return (
     <div className="schedule-card">
       {/* ส่วนซ้าย - เวลา */}
@@ -48,30 +54,50 @@ const ScheduleCard = ({ item }) => {
       <div className="card-right">
         {/* Social Media */}
         <div className="social-section">
-          <span className="watch-text">รับชมได้ในช่องทาง</span>
-          <div className="social-icons">
-            <SocialIcon platform="facebook" />
-            <SocialIcon platform="youtube" />
-            {item.channels && item.channels.length > 2 && (
-              <>
-                <SocialIcon platform="instagram" />
-                <SocialIcon platform="tiktok" />
-              </>
-            )}
-          </div>
-          <span className="channel-names">
-            {item.channels ? item.channels.slice(0, 2).join(' ') : ''}
-          </span>
+          <span className="watch-text">รับชมได้ทางช่องทาง</span>
+        
         </div>
 
-        {/* Logo */}
-        <div className="logo-section">
-          {item.logo === "THE Nasihat" && (
-            <span className="logo-icon">📖</span>
-          )}
-          {item.logo === "THE issue" && (
-            <span className="logo-icon">💡</span>
-          )}
+        {/* Logo - คลิกได้ */}
+        <div 
+          className="logo-section clickable" 
+          onClick={handleLogoClick}
+          title="ดูรายการใน YouTube"
+        >
+          {/* ส่วนสำหรับรูปโลโก้ */}
+          <div className="logo-image">
+            {item.logoImage ? (
+              <img 
+                src={item.logoImage} 
+                alt={item.logo}
+                onError={(e) => {
+                  // ถ้าโหลดรูปไม่ได้จะแสดง fallback icon
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'inline';
+                }}
+              />
+            ) : (
+              // Fallback icons ถ้าไม่มีรูป
+              <>
+                {item.logo === "THE Nasihat" && (
+                  <span className="logo-icon">📖</span>
+                )}
+                {item.logo === "THE issue" && (
+                  <span className="logo-icon">💡</span>
+                )}
+                {!item.logo.includes("THE") && (
+                  <span className="logo-icon">🎬</span>
+                )}
+              </>
+            )}
+            {/* Hidden fallback icon */}
+            <span className="logo-icon fallback" style={{display: 'none'}}>
+              {item.logo === "THE Nasihat" && "📖"}
+              {item.logo === "THE issue" && "💡"}
+              {!item.logo.includes("THE") && "🎬"}
+            </span>
+          </div>
+          
           <div className="logo-text">
             {item.logo}
           </div>
@@ -85,14 +111,6 @@ const Schedule = () => {
   return (
     <section className="schedule-section">
       <div className="container">
-        <div className="header">
-          <h2 className="main-title">
-            ผังรายการ ประจำสัปดาห์ TMYDA
-          </h2>
-          <p className="description">
-            ติดตามรายการและเนื้อหาคุณภาพจากทีม TMYDA
-          </p>
-        </div>
         
         <div className="schedule-grid">
           {scheduleData && scheduleData.map((item) => (

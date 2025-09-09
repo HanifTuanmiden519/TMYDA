@@ -10,7 +10,8 @@ const Social = () => {
             ติดตามเรา
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            อัพเดทข่าวสารและกิจกรรมใหม่ๆ จากช่องทางโซเชียลมีเดียของเรา
+            เชื่อมต่อกับเราเพื่อรับข่าวสาร กิจกรรม และโปรโมชั่นสุดพิเศษ<br />
+            ผ่านช่องทางโซเชียลมีเดียที่คุณสะดวกที่สุด
           </p>
         </div>
 
@@ -24,18 +25,30 @@ const Social = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={social.name}
+                className="flex flex-col items-center"
               >
                 <div className="social-container">
                   <IconComponent className={`social-icon ${social.colorClass}`} />
                 </div>
+                <span
+                  className="mt-2 text-sm font-medium"
+                  style={{
+                    color: '#2563eb', // Tailwind blue-600
+                    textDecoration: 'none',
+                    cursor: 'default'
+                  }}
+                >
+                  {social.name}
+                </span>
               </a>
             );
           })}
         </div>
 
         <div className="text-center mt-8">
-          <p className="text-gray-500 text-sm">
-            คลิกไอคอนเพื่อเข้าสู่ช่องทางโซเชียลมีเดียที่ต้องการ
+          <p className="text-gray-500 text-base font-semibold">
+            คลิกที่โลโก้เพื่อเข้าสู่ช่องทางโซเชียลมีเดียของเรา<br />
+            แล้วอย่าลืมกดติดตามเพื่อไม่พลาดทุกความเคลื่อนไหว!
           </p>
         </div>
       </div>

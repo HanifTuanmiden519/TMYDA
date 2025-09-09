@@ -6,6 +6,8 @@ export const scheduleData = [
     time: "อาทิตย์",
     timeDetail: "20.30 น.",
     logo: "อีกมุม PERSPECTIVE",
+    logoImage: "/public/image/1.png", // เพิ่มรูปโลโก้ที่นี่
+    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
     channels: ["fityatulhaq", "TMYDA"]
   },
   {
@@ -14,7 +16,9 @@ export const scheduleData = [
     subtitle: "(SHORT CLIP)",
     time: "จันทร์ - พุธ",
     timeDetail: "17.30 น.",
-    logo: "อีกมุม PERSPECTIVE", 
+    logo: "อีกมุม PERSPECTIVE",
+    logoImage: "/public/image/1.png", // เพิ่มรูปโลโก้ที่นี่
+    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
     channels: ["fityatulhaq", "TMYDA", "fityatulhaq", "fityatulhaq"]
   },
   {
@@ -24,6 +28,8 @@ export const scheduleData = [
     timeDetail: "20.30 น.",
     subtitle2: "2 สัปดาห์/ครั้ง",
     logo: "อัล มะ ดา รัจ",
+    logoImage: "/public/image/4.png", // เพิ่มรูปโลโก้ที่นี่
+    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
     channels: ["TMYDA", "TMYDA"]
   },
   {
@@ -32,6 +38,8 @@ export const scheduleData = [
     time: "อังคาร , พฤหัสบดี",
     timeDetail: "21.00 น.",
     logo: "อัล มะ ดา รัจ",
+    logoImage: "/public/image/4.png", // เพิ่มรูปโลโก้ที่นี่
+    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
     channels: ["YouthCare", "TMYDA", "YouthCare", "TMYDA"]
   },
   {
@@ -40,6 +48,8 @@ export const scheduleData = [
     time: "พุธ",
     timeDetail: "21.00 น.",
     logo: "THE Nasihat",
+    logoImage: "/public/image/2.png", // เพิ่มรูปโลโก้ที่นี่
+    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
     channels: ["YouthCare", "TMYDA", "YouthCare", "TMYDA"]
   },
   {
@@ -48,6 +58,8 @@ export const scheduleData = [
     time: "ศุกร์ - เสาร์",
     timeDetail: "21.00 น.",
     logo: "THE issue",
+    logoImage: "/public/image/3.png", // เพิ่มรูปโลโก้ที่นี่
+    youtubeUrl: "https://www.youtube.com/@tmyda1906", // ลิงค์ยูทูป
     channels: ["fityatulhaq", "TMYDA", "fityatulhaq", "fityatulhaq"]
   }
 ];
